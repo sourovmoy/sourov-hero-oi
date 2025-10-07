@@ -1,6 +1,6 @@
 import React from "react";
 import img from "../images/logo.png";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import { Github } from "lucide-react";
 
 const Navbar = ({ links }) => {
@@ -35,10 +35,10 @@ const Navbar = ({ links }) => {
             ))}
           </ul>
         </div>
-        <span className="flex items-center">
+        <Link to="/" className="flex items-center">
           <img className="w-8" src={img} alt="" />
           <p className="font-bold text-xl">HERO.IO</p>
-        </span>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-5">
@@ -50,10 +50,13 @@ const Navbar = ({ links }) => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn bg-gradient-to-l from-[#632ee3] to-[#9f62f2] hover:scale-105">
+        <Link
+          to="https://github.com/sourovmoy"
+          className="btn bg-gradient-to-l from-[#632ee3] to-[#9f62f2] hover:scale-105"
+        >
           <Github className="p-0.5 "></Github>
           Contribute
-        </a>
+        </Link>
       </div>
     </div>
   );

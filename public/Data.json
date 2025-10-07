@@ -1,0 +1,434 @@
+[
+  {
+    "image": "https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Green.png",
+    "title": "Spotify: Music and Podcasts",
+    "companyName": "Spotify AB",
+    "id": 1,
+    "description": "Stream millions of songs, podcasts, and playlists for free.",
+    "size": 68,
+    "reviews": 35600000,
+    "ratingAvg": 4.4,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 400000 },
+      { "name": "2 star", "count": 600000 },
+      { "name": "3 star", "count": 1200000 },
+      { "name": "4 star", "count": 4000000 },
+      { "name": "5 star", "count": 29000000 }
+    ]
+  },
+  {
+    "image": "https://img.freepik.com/premium-psd/instagram-logo_971166-164497.jpg?semt=ais_hybrid&w=740&q=80",
+    "title": "Instagram",
+    "companyName": "Meta Platforms, Inc.",
+    "id": 2,
+    "description": "Share your moments through photos, videos, and stories.",
+    "size": 120,
+    "reviews": 165000000,
+    "ratingAvg": 4.0,
+    "downloads": 5000000000,
+    "ratings": [
+      { "name": "1 star", "count": 5000000 },
+      { "name": "2 star", "count": 7000000 },
+      { "name": "3 star", "count": 12000000 },
+      { "name": "4 star", "count": 30000000 },
+      { "name": "5 star", "count": 110000000 }
+    ]
+  },
+  {
+    "image": "https://img.freepik.com/free-vector/youtube-player-icon-with-flat-design_23-2147837753.jpg",
+    "title": "YouTube",
+    "companyName": "Google LLC",
+    "id": 3,
+    "description": "Watch videos, subscribe to channels, and explore trends worldwide.",
+    "size": 95,
+    "reviews": 155000000,
+    "ratingAvg": 4.2,
+    "downloads": 10000000000,
+    "ratings": [
+      { "name": "1 star", "count": 3000000 },
+      { "name": "2 star", "count": 7000000 },
+      { "name": "3 star", "count": 9000000 },
+      { "name": "4 star", "count": 20000000 },
+      { "name": "5 star", "count": 120000000 }
+    ]
+  },
+  {
+    "image": "https://static.vecteezy.com/system/resources/previews/016/716/450/non_2x/tiktok-icon-free-png.png",
+    "title": "TikTok",
+    "companyName": "TikTok Pte. Ltd.",
+    "id": 4,
+    "description": "Discover and create short videos with music and effects.",
+    "size": 85,
+    "reviews": 58000000,
+    "ratingAvg": 4.4,
+    "downloads": 5000000000,
+    "ratings": [
+      { "name": "1 star", "count": 2000000 },
+      { "name": "2 star", "count": 4000000 },
+      { "name": "3 star", "count": 7000000 },
+      { "name": "4 star", "count": 18000000 },
+      { "name": "5 star", "count": 27000000 }
+    ]
+  },
+  {
+    "image": "https://img.freepik.com/premium-vector/snapchat-logo_628407-1682.jpg?semt=ais_hybrid&w=740&q=80",
+    "title": "Snapchat",
+    "companyName": "Snap Inc.",
+    "id": 5,
+    "description": "Share the moment with friends through photos and chat.",
+    "size": 70,
+    "reviews": 35000000,
+    "ratingAvg": 4.1,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 1000000 },
+      { "name": "2 star", "count": 3000000 },
+      { "name": "3 star", "count": 4000000 },
+      { "name": "4 star", "count": 10000000 },
+      { "name": "5 star", "count": 17000000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Netflix_icon.svg/1200px-Netflix_icon.svg.png",
+    "title": "Netflix",
+    "companyName": "Netflix, Inc.",
+    "id": 6,
+    "description": "Stream your favorite movies and TV shows anytime, anywhere.",
+    "size": 60,
+    "reviews": 15000000,
+    "ratingAvg": 4.3,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 1000000 },
+      { "name": "2 star", "count": 1500000 },
+      { "name": "3 star", "count": 2500000 },
+      { "name": "4 star", "count": 5000000 },
+      { "name": "5 star", "count": 5000000 }
+    ]
+  },
+  {
+    "image": "https://cdn0.iconfinder.com/data/icons/most-usable-logos/120/Amazon-512.png",
+    "title": "Amazon Shopping",
+    "companyName": "Amazon Mobile LLC",
+    "id": 7,
+    "description": "Shop millions of products and track your orders easily.",
+    "size": 130,
+    "reviews": 23000000,
+    "ratingAvg": 4.3,
+    "downloads": 500000000,
+    "ratings": [
+      { "name": "1 star", "count": 1000000 },
+      { "name": "2 star", "count": 2000000 },
+      { "name": "3 star", "count": 3000000 },
+      { "name": "4 star", "count": 7000000 },
+      { "name": "5 star", "count": 10000000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1024px-Telegram_logo.svg.png",
+    "title": "Telegram",
+    "companyName": "Telegram FZ-LLC",
+    "id": 8,
+    "description": "Fast and secure messaging app with powerful privacy features.",
+    "size": 80,
+    "reviews": 12000000,
+    "ratingAvg": 4.5,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 500000 },
+      { "name": "2 star", "count": 800000 },
+      { "name": "3 star", "count": 1200000 },
+      { "name": "4 star", "count": 3000000 },
+      { "name": "5 star", "count": 6500000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png",
+    "title": "Pinterest",
+    "companyName": "Pinterest, Inc.",
+    "id": 9,
+    "description": "Find inspiration for recipes, home decor, and style ideas.",
+    "size": 110,
+    "reviews": 15000000,
+    "ratingAvg": 4.6,
+    "downloads": 500000000,
+    "ratings": [
+      { "name": "1 star", "count": 400000 },
+      { "name": "2 star", "count": 700000 },
+      { "name": "3 star", "count": 900000 },
+      { "name": "4 star", "count": 2500000 },
+      { "name": "5 star", "count": 10000000 }
+    ]
+  },
+  {
+    "image": "https://img.freepik.com/premium-vector/reddit-logo_578229-207.jpg",
+    "title": "Reddit",
+    "companyName": "reddit Inc.",
+    "id": 10,
+    "description": "Dive into communities of every interest imaginable.",
+    "size": 100,
+    "reviews": 12000000,
+    "ratingAvg": 4.1,
+    "downloads": 100000000,
+    "ratings": [
+      { "name": "1 star", "count": 1000000 },
+      { "name": "2 star", "count": 1200000 },
+      { "name": "3 star", "count": 1500000 },
+      { "name": "4 star", "count": 3000000 },
+      { "name": "5 star", "count": 5200000 }
+    ]
+  },
+  {
+    "image": "https://img.freepik.com/premium-vector/whatsapp-app-round-icon-popular-messenger-social-media-logo_277909-873.jpg?w=360",
+    "title": "WhatsApp Messenger",
+    "companyName": "Meta Platforms, Inc.",
+    "id": 11,
+    "description": "Simple, reliable messaging & calling around the world.",
+    "size": 100,
+    "reviews": 48000000,
+    "ratingAvg": 4.6,
+    "downloads": 5000000000,
+    "ratings": [
+      { "name": "1 star", "count": 600000 },
+      { "name": "2 star", "count": 800000 },
+      { "name": "3 star", "count": 1000000 },
+      { "name": "4 star", "count": 8000000 },
+      { "name": "5 star", "count": 39000000 }
+    ]
+  },
+  {
+    "image": "https://static.vecteezy.com/system/resources/previews/018/930/698/non_2x/facebook-logo-facebook-icon-transparent-free-png.png",
+    "title": "Facebook",
+    "companyName": "Meta Platforms, Inc.",
+    "id": 12,
+    "description": "Connect with friends, family and communities.",
+    "size": 120,
+    "reviews": 100000000,
+    "ratingAvg": 4.0,
+    "downloads": 5000000000,
+    "ratings": [
+      { "name": "1 star", "count": 7000000 },
+      { "name": "2 star", "count": 9000000 },
+      { "name": "3 star", "count": 12000000 },
+      { "name": "4 star", "count": 30000000 },
+      { "name": "5 star", "count": 36500000 }
+    ]
+  },
+  {
+    "image": "https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/250/duolingo-logo-new-512.png",
+    "title": "Duolingo: Learn Languages",
+    "companyName": "Duolingo",
+    "id": 13,
+    "description": "Learn Spanish, French, and over 40 languages for free.",
+    "size": 75,
+    "reviews": 25000000,
+    "ratingAvg": 4.7,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 200000 },
+      { "name": "2 star", "count": 300000 },
+      { "name": "3 star", "count": 700000 },
+      { "name": "4 star", "count": 3000000 },
+      { "name": "5 star", "count": 21700000 }
+    ]
+  },
+  {
+    "image": "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/canva-icon.png",
+    "title": "Canva: Graphic Design, Video & Logo",
+    "companyName": "Canva",
+    "id": 14,
+    "description": "Make designs, logos, videos, and more with simple tools.",
+    "size": 90,
+    "reviews": 15000000,
+    "ratingAvg": 4.8,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 100000 },
+      { "name": "2 star", "count": 200000 },
+      { "name": "3 star", "count": 500000 },
+      { "name": "4 star", "count": 3000000 },
+      { "name": "5 star", "count": 11800000 }
+    ]
+  },
+  {
+    "image": "https://img.freepik.com/premium-vector/vector-discord-social-media-logo_534308-21667.jpg?semt=ais_hybrid&w=740&q=80",
+    "title": "Discord",
+    "companyName": "Discord Inc.",
+    "id": 15,
+    "description": "Chat, voice, and video call with friends and communities.",
+    "size": 100,
+    "reviews": 12000000,
+    "ratingAvg": 4.7,
+    "downloads": 500000000,
+    "ratings": [
+      { "name": "1 star", "count": 200000 },
+      { "name": "2 star", "count": 300000 },
+      { "name": "3 star", "count": 700000 },
+      { "name": "4 star", "count": 3000000 },
+      { "name": "5 star", "count": 8400000 }
+    ]
+  },
+  {
+    "image": "https://static.vecteezy.com/system/resources/previews/027/127/550/non_2x/uber-logo-uber-icon-transparent-free-png.png",
+    "title": "Uber",
+    "companyName": "Uber Technologies, Inc.",
+    "id": 16,
+    "description": "Request rides, delivery, and explore mobility options.",
+    "size": 80,
+    "reviews": 10000000,
+    "ratingAvg": 4.2,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 300000 },
+      { "name": "2 star", "count": 500000 },
+      { "name": "3 star", "count": 1000000 },
+      { "name": "4 star", "count": 3000000 },
+      { "name": "5 star", "count": 6300000 }
+    ]
+  },
+  {
+    "image": "https://img.freepik.com/premium-vector/video-call-icon-template-your-design_97886-21990.jpg?semt=ais_hybrid&w=740&q=80",
+    "title": "Zoom",
+    "companyName": "Zoom Video Communications, Inc.",
+    "id": 17,
+    "description": "Video conferencing, webinars, and chat for teams and friends.",
+    "size": 90,
+    "reviews": 15000000,
+    "ratingAvg": 4.3,
+    "downloads": 500000000,
+    "ratings": [
+      { "name": "1 star", "count": 250000 },
+      { "name": "2 star", "count": 400000 },
+      { "name": "3 star", "count": 800000 },
+      { "name": "4 star", "count": 3000000 },
+      { "name": "5 star", "count": 11500000 }
+    ]
+  },
+  {
+    "image": "https://i.pinimg.com/736x/40/7c/70/407c7058d338e186c53c807d03634911.jpg",
+    "title": "Adobe Lightroom: Photo Editor",
+    "companyName": "Adobe",
+    "id": 18,
+    "description": "Edit, filter, and enhance your photos with professional tools.",
+    "size": 85,
+    "reviews": 10000000,
+    "ratingAvg": 4.6,
+    "downloads": 500000000,
+    "ratings": [
+      { "name": "1 star", "count": 150000 },
+      { "name": "2 star", "count": 200000 },
+      { "name": "3 star", "count": 450000 },
+      { "name": "4 star", "count": 2000000 },
+      { "name": "5 star", "count": 8500000 }
+    ]
+  },
+  {
+    "image": "https://w7.pngwing.com/pngs/873/435/png-transparent-waze-gps-navigation-systems-app-store-ipa-waze-smiley-android-traffic.png",
+    "title": "Waze – GPS, Maps & Traffic",
+    "companyName": "Google LLC",
+    "id": 19,
+    "description": "Real-time driving directions, traffic, & alerts.",
+    "size": 70,
+    "reviews": 5000000,
+    "ratingAvg": 4.2,
+    "downloads": 500000000,
+    "ratings": [
+      { "name": "1 star", "count": 80000 },
+      { "name": "2 star", "count": 150000 },
+      { "name": "3 star", "count": 300000 },
+      { "name": "4 star", "count": 1000000 },
+      { "name": "5 star", "count": 3750000 }
+    ]
+  },
+  {
+    "image": "https://images.icon-icons.com/2699/PNG/512/slack_tile_logo_icon_168820.png",
+    "title": "Slack",
+    "companyName": "Slack Technologies, LLC",
+    "id": 20,
+    "description": "Team communication & collaboration platform.",
+    "size": 90,
+    "reviews": 3000000,
+    "ratingAvg": 4.5,
+    "downloads": 200000000,
+    "ratings": [
+      { "name": "1 star", "count": 50000 },
+      { "name": "2 star", "count": 100000 },
+      { "name": "3 star", "count": 200000 },
+      { "name": "4 star", "count": 600000 },
+      { "name": "5 star", "count": 1890000 }
+    ]
+  },
+  {
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIqOGxczIPRTmOb5q_gIaWdNJxCTpJDffH4g&s",
+    "title": "Trello",
+    "companyName": "Atlassian",
+    "id": 21,
+    "description": "Organize work & manage tasks using boards and lists.",
+    "size": 60,
+    "reviews": 2500000,
+    "ratingAvg": 4.4,
+    "downloads": 200000000,
+    "ratings": [
+      { "name": "1 star", "count": 40000 },
+      { "name": "2 star", "count": 80000 },
+      { "name": "3 star", "count": 150000 },
+      { "name": "4 star", "count": 500000 },
+      { "name": "5 star", "count": 1770000 }
+    ]
+  },
+  {
+    "image": "https://w7.pngwing.com/pngs/328/136/png-transparent-strava-running-android-android-orange-logo-running.png",
+    "title": "Strava: Run, Ride, Swim",
+    "companyName": "Strava, Inc.",
+    "id": 22,
+    "description": "Track your run, ride, and swim performance with community support.",
+    "size": 85,
+    "reviews": 5000000,
+    "ratingAvg": 4.5,
+    "downloads": 200000000,
+    "ratings": [
+      { "name": "1 star", "count": 60000 },
+      { "name": "2 star", "count": 120000 },
+      { "name": "3 star", "count": 300000 },
+      { "name": "4 star", "count": 1000000 },
+      { "name": "5 star", "count": 1080000 }
+    ]
+  },
+  {
+    "image": "https://w7.pngwing.com/pngs/248/572/png-transparent-computer-icons-evernote-logo-mark-icon-text-trademark-logo-thumbnail.png",
+    "title": "Evernote: Notes Organizer",
+    "companyName": "Evernote Corporation",
+    "id": 23,
+    "description": "Write notes, organize tasks, and manage ideas across devices.",
+    "size": 95,
+    "reviews": 4000000,
+    "ratingAvg": 4.3,
+    "downloads": 200000000,
+    "ratings": [
+      { "name": "1 star", "count": 50000 },
+      { "name": "2 star", "count": 80000 },
+      { "name": "3 star", "count": 200000 },
+      { "name": "4 star", "count": 600000 },
+      { "name": "5 star", "count": 2850000 }
+    ]
+  },
+  {
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZCT7hq-kAh4yr7UF9B1ZpNhlbTJ9lhl2ROg&s",
+    "title": "Fitbit",
+    "companyName": "Google LLC",
+    "id": 24,
+    "description": "Track your health, fitness, and activity from your wrist to your phone.",
+    "size": 80,
+    "reviews": 4000000,
+    "ratingAvg": 4.4,
+    "downloads": 200000000,
+    "ratings": [
+      { "name": "1 star", "count": 60000 },
+      { "name": "2 star", "count": 100000 },
+      { "name": "3 star", "count": 200000 },
+      { "name": "4 star", "count": 600000 },
+      { "name": "5 star", "count": 3140000 }
+    ]
+  }
+]

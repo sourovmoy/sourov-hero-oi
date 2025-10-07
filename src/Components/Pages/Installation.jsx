@@ -1,7 +1,7 @@
 import React from "react";
 
 const Installation = () => {
-  return <div>i am in</div>;
+  return <div className="h-[100vh]">i am in</div>;
 };
 
 export default Installation;
