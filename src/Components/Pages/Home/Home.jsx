@@ -58,6 +58,10 @@ const Home = () => {
         </div>
       </div>
       <Container>
+        <h3 className="text-center font-bold text-4xl py-8">Trending Apps</h3>
+        <p className="text-center text-[#627382]">
+          Explore All Trending Apps on the Market developed by us
+        </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 pt-20">
           {trendingApps.map((app) => (
             <TrendingApps key={app.id} app={app}></TrendingApps>
@@ -65,7 +69,10 @@ const Home = () => {
         </div>
       </Container>
       <div className="flex justify-center my-10">
-        <Link className="btn bg-gradient-to-l from-[#632ee3] to-[#9f62f2] hover:scale-105 text-white">
+        <Link
+          className="btn bg-gradient-to-l from-[#632ee3] to-[#9f62f2] hover:scale-105 text-white"
+          to="/app"
+        >
           See More <ArrowRight />
         </Link>
       </div>
