@@ -1,9 +1,13 @@
 import { Download, Star } from "lucide-react";
 import React from "react";
+import { Link } from "react-router";
 
 const ShowApps = ({ app }) => {
   return (
-    <div className="text-center shadow-lg p-2 rounded-md bg-white hover:scale-105">
+    <Link
+      to={`/apps/${app.id}`}
+      className="text-center shadow-lg p-2 rounded-md bg-white hover:scale-105"
+    >
       <img className="p-2 h-52 mx-auto" src={app.image} alt="" />
       <h3 className="font-semibold text-xl mb-8">{app.title}</h3>
       <div className="flex justify-between items-center my-2 px-3 ">
@@ -18,7 +22,7 @@ const ShowApps = ({ app }) => {
           </p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -22,7 +22,7 @@ const Apps = () => {
         </p>
         <div className="sm:flex justify-between items-center m-10">
           <h4 className="font-semibold text-center py-5 sm:py-0 text-xl">
-            (<span>{apps.length}</span>) Apps Found
+            (<span>{searchApps.length}</span>) Apps Found
           </h4>
           <label className="input">
             <svg
