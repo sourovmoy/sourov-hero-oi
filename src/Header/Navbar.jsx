@@ -52,7 +52,7 @@ const Navbar = ({ links }) => {
       <div className="navbar-end">
         <Link
           to="https://github.com/sourovmoy"
-          className="btn bg-gradient-to-l from-[#632ee3] to-[#9f62f2] hover:scale-105"
+          className="btn bg-gradient-to-l from-[#632ee3] to-[#9f62f2] hover:scale-105 text-white"
         >
           <Github className="p-0.5 "></Github>
           Contribute

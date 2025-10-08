@@ -3,8 +3,15 @@ import Container from "../../Container";
 import img1 from "../../../images/Group (3).png";
 import img2 from "../../../images/Group (4).png";
 import img3 from "../../../images/hero.png";
+import useApps from "../../../useApps";
+import TrendingApps from "./TrendingApps";
+import { Link } from "react-router";
+import { ArrowRight } from "lucide-react";
 
 const Home = () => {
+  const { apps } = useApps();
+  const trendingApps = apps.slice(0, 8);
+
   return (
     <div className="my-20">
       <Container>
@@ -49,6 +56,18 @@ const Home = () => {
             <p className="text-sm pt-2">31 more will Launch</p>
           </div>
         </div>
+      </div>
+      <Container>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 pt-20">
+          {trendingApps.map((app) => (
+            <TrendingApps key={app.id} app={app}></TrendingApps>
+          ))}
+        </div>
+      </Container>
+      <div className="flex justify-center my-10">
+        <Link className="btn bg-gradient-to-l from-[#632ee3] to-[#9f62f2] hover:scale-105 text-white">
+          See More <ArrowRight />
+        </Link>
       </div>
     </div>
   );

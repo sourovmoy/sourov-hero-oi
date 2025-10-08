@@ -22,7 +22,7 @@ const Root = () => {
     },
   ];
   return (
-    <div className="mx-2 md:mx-0">
+    <div className="mx-2 md:mx-0 bg-[#F1F5E8]">
       <Navbar links={links}></Navbar>
       <Outlet></Outlet>
       <Footer></Footer>
