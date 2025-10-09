@@ -8,6 +8,7 @@ import { addApps } from "../../Functions/localStorage";
 import { toast } from "react-toastify";
 import Rechart from "./Rechart";
 import Loader from "../Loader";
+import AppErrors from "../Error/AppErrors";
 
 const AppDetails = () => {
   const [state, setState] = useState(false);
@@ -26,7 +27,7 @@ const AppDetails = () => {
   const selectedApp = apps.find((app) => String(app.id) == id) || {};
   if (loading) return <Loader></Loader>;
   if (Object.keys(selectedApp).length === 0) {
-    return <div>Nothing</div>;
+    return <AppErrors></AppErrors>;
   }
   const {
     image,

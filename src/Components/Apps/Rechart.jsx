@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   ResponsiveContainer,
   ComposedChart,
@@ -14,7 +15,10 @@ const RatingsChart = ({ ratings }) => {
     <div style={{ width: "100%", height: 211 }}>
       <ResponsiveContainer width="100%" height="100%">
         <ComposedChart
+          accessibilityLayer
           layout="vertical"
+          barCategoryGap="10%"
+          barGap={10}
           data={ratings}
           margin={{
             top: 10,
