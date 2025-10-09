@@ -25,13 +25,21 @@ const Home = () => {
           into digital experiences that truly make an impact.
         </p>
         <div className="flex justify-center gap-8 py-5">
-          <a className="btn hover:scale-105">
+          <Link
+            target="_blank"
+            to="https://play.google.com/store/games?device=windows"
+            className="btn hover:scale-105"
+          >
             <img className="m-1" src={img1} alt="" /> Google Play
-          </a>
-          <a className="btn hover:scale-105">
-            <img className="bg-blue-600 p-0.5 rounded-md" src={img2} alt="" />{" "}
+          </Link>
+          <Link
+            target="_blank"
+            to="https://www.apple.com/app-store/"
+            className="btn hover:scale-105"
+          >
+            <img className="bg-blue-600 p-0.5 rounded-md" src={img2} alt="" />
             App Store
-          </a>
+          </Link>
         </div>
         <img className="flex mx-auto pt-10" src={img3} alt="" />
       </Container>

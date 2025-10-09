@@ -4,6 +4,7 @@ import useApps from "../../useApps";
 import Container from "../Container";
 import { Download, Star } from "lucide-react";
 import img from "../../images/icon-review.png";
+import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
 
 const AppDetails = () => {
   const { id } = useParams();
@@ -66,6 +67,13 @@ const AppDetails = () => {
         </div>
         <div>
           <h2 className="text-2xl font-semibold">Rating</h2>
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart width="150" height="40" data={ratings}>
+              <XAxis />
+              <YAxis dataKey="name" />
+              <Bar dataKey="count" />
+            </BarChart>
+          </ResponsiveContainer>
         </div>
 
         <div className="my-10 border-t-1 border-[#627382]">
