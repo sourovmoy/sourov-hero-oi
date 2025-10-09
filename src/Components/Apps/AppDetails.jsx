@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useParams } from "react-router";
-import useApps from "../../useApps";
+import useApps from "../../Functions/useApps";
 import Container from "../Container";
 import { Download, Star } from "lucide-react";
 import img from "../../images/icon-review.png";
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
+import { addApps } from "../../Functions/localStorage";
 
 const AppDetails = () => {
+  const [state, setState] = useState(false);
+
+  const handelInstall = (statement, id) => {
+    if (state === true) {
+      alert("Already Installed");
+      return;
+    }
+    addApps(id);
+    setState(statement);
+  };
+
   const { id } = useParams();
   const { apps, loading } = useApps();
   const selectedApp = apps.find((app) => String(app.id) == id);
@@ -28,16 +40,19 @@ const AppDetails = () => {
   return (
     <div>
       <Container>
-        <div className="flex p-4 border-b-1 pb-10 border-[#627382]">
-          <div className="w-[20vw] mx-20">
+        <div className="sm:flex p-4 border-b-1 pb-10 border-[#627382]">
+          <div className="sm:w-[20vw] mx-20">
             <img className="rounded-2xl" src={image} alt="" />
           </div>
           <div className="flex-1">
             <h3 className="text-2xl font-bold mb-2">{title}</h3>
             <p className="border-b-1 pb-10 text-[#627382]">
-              Developed by <span className="text-[#632ee3]">{companyName}</span>
+              Developed by{" "}
+              <span className="text-[#632ee3] font-semibold">
+                {companyName}
+              </span>
             </p>
-            <div className="flex gap-20 items-center my-4">
+            <div className="flex gap-5 sm:gap-20 items-center my-4">
               <div>
                 <Download className="text-green-600" />
                 <p className="text-[#627382] text-sm font-semibold my-2">
@@ -46,7 +61,7 @@ const AppDetails = () => {
                 <p className="font-bold text-2xl">{downloads}</p>
               </div>
               <div>
-                <Star className="text-green-600" />
+                <Star className="text-[#FF8811]" />
                 <p className="text-[#627382] text-sm font-semibold my-2">
                   Average Ratings
                 </p>
@@ -60,9 +75,17 @@ const AppDetails = () => {
                 <p className="font-bold text-2xl">{review} M</p>
               </div>
             </div>
-            <Link className="btn bg-gradient-to-l from-[#632ee3] to-[#9f62f2] hover:scale-105 text-white">
+            <button
+              disabled={state}
+              onClick={() => handelInstall(true, selectedApp)}
+              className={
+                state
+                  ? "btn bg-gradient-to-l from-[#632ee3] to-[#9f62f2] hover:scale-105 text-white opacity-40"
+                  : "btn bg-gradient-to-l from-[#632ee3] to-[#9f62f2] hover:scale-105 text-white"
+              }
+            >
               Install Now (<span>{size} MB</span>)
-            </Link>
+            </button>
           </div>
         </div>
         <div>

@@ -3,7 +3,7 @@ import Container from "../../Container";
 import img1 from "../../../images/Group (3).png";
 import img2 from "../../../images/Group (4).png";
 import img3 from "../../../images/hero.png";
-import useApps from "../../../useApps";
+import useApps from "../../../Functions/useApps";
 import TrendingApps from "./TrendingApps";
 import { Link } from "react-router";
 import { ArrowRight } from "lucide-react";

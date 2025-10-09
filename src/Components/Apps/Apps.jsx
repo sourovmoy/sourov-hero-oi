@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Container from "../Container";
-import useApps from "../../useApps";
+import useApps from "../../Functions/useApps";
 import ShowApps from "./ShowApps";
 
 const Apps = () => {
