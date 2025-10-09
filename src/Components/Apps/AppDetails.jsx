@@ -16,7 +16,7 @@ const AppDetails = () => {
   const handelInstall = (statement, app) => {
     addApps(app);
     setState(statement);
-    if (state === false) {
+    if (state) {
       return;
     }
     toast("Installing");
