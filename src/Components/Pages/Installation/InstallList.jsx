@@ -1,11 +1,7 @@
 import { Download, Star } from "lucide-react";
 import React from "react";
-import { removeApps } from "../../../Functions/localStorage";
 
-const InstallList = ({ app }) => {
-  const handelRemove = (id) => {
-    removeApps(id);
-  };
+const InstallList = ({ app, handelRemove }) => {
   return (
     <div className="bg-white sm:flex justify-between items-center px-4 py-3 sm:py-0">
       <div className="flex justify-between sm:justify-normal items-center gap-3">

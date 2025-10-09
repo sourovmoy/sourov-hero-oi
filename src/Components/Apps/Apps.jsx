@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import Container from "../Container";
 import useApps from "../../Functions/useApps";
 import ShowApps from "./ShowApps";
+import Loader from "../Loader";
 
 const Apps = () => {
-  const { apps } = useApps();
+  const { apps, loading } = useApps();
   const [search, setSearch] = useState("");
   const trim = search.trim().toLocaleLowerCase();
   const searchApps = trim
@@ -51,11 +52,19 @@ const Apps = () => {
           </label>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-10">
-        {searchApps.map((app) => (
-          <ShowApps key={app.id} app={app}></ShowApps>
-        ))}
-      </div>
+      {loading ? (
+        <Loader></Loader>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-10">
+          {searchApps.length === 0 ? (
+            <h2 className="text-center text-4xl font-medium">No Data Found</h2>
+          ) : (
+            searchApps.map((app) => (
+              <ShowApps key={app.id} app={app}></ShowApps>
+            ))
+          )}
+        </div>
+      )}
     </Container>
   );
 };

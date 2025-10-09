@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 const getApps = () => {
   const getAppString = localStorage.getItem("apps");
   if (getAppString) {
@@ -12,11 +14,16 @@ const setItemString = (apps) => {
   localStorage.setItem("apps", appsString);
 };
 
-const addApps = (id) => {
+const addApps = (state) => {
   const getAllApps = getApps();
-  const newCart = [...getAllApps, id];
-
-  setItemString(newCart);
+  const alreadyExists = getAllApps.some((item) => item.id === state.id);
+  if (alreadyExists) {
+    toast("Already Installed");
+    return;
+  } else {
+    getAllApps.push(state);
+    setItemString(getAllApps);
+  }
 };
 const removeApps = (id) => {
   const apps = getApps();

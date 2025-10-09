@@ -8,6 +8,7 @@ const ShowApps = ({ app }) => {
       to={`/apps/${app.id}`}
       className="text-center shadow-lg p-2 rounded-md bg-white hover:scale-105"
     >
+      <h1>name</h1>
       <img className="p-2 h-52 mx-auto" src={app.image} alt="" />
       <h3 className="font-semibold text-xl mb-8">{app.title}</h3>
       <div className="flex justify-between items-center my-2 px-3 ">

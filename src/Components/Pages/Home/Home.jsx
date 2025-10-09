@@ -7,9 +7,10 @@ import useApps from "../../../Functions/useApps";
 import TrendingApps from "./TrendingApps";
 import { Link } from "react-router";
 import { ArrowRight } from "lucide-react";
+import Loader from "../../Loader";
 
 const Home = () => {
-  const { apps } = useApps();
+  const { apps, loading } = useApps();
   const trendingApps = apps.slice(0, 8);
 
   return (
@@ -70,11 +71,15 @@ const Home = () => {
         <p className="text-center text-[#627382]">
           Explore All Trending Apps on the Market developed by us
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 pt-20">
-          {trendingApps.map((app) => (
-            <TrendingApps key={app.id} app={app}></TrendingApps>
-          ))}
-        </div>
+        {loading ? (
+          <Loader></Loader>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 pt-20">
+            {trendingApps.map((app) => (
+              <TrendingApps key={app.id} app={app}></TrendingApps>
+            ))}
+          </div>
+        )}
       </Container>
       <div className="flex justify-center my-10">
         <Link

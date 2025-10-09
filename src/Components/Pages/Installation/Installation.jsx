@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { getApps } from "../../../Functions/localStorage";
+import { getApps, removeApps } from "../../../Functions/localStorage";
 import Container from "../../Container";
 import InstallList from "./InstallList";
 
 const Installation = () => {
   const [installedApps, setInstalledApps] = useState([]);
   const [sort, setSort] = useState();
+
   useEffect(() => {
     const newInstalledApps = getApps();
     if (newInstalledApps) setInstalledApps(newInstalledApps);
   }, []);
+
   const sortedItem = (() => {
     if (sort === "low-to-high") {
       return [...installedApps].sort((a, b) => a.size - b.size);
@@ -19,6 +21,11 @@ const Installation = () => {
     } else return installedApps;
   })();
 
+  const handelRemove = (id) => {
+    const newApps = installedApps.filter((app) => app.id !== id);
+    setInstalledApps(newApps);
+    removeApps(id);
+  };
   return (
     <Container>
       <div className="">
@@ -49,7 +56,7 @@ const Installation = () => {
         {sortedItem.map((app) => (
           <InstallList
             key={app.id}
-            installedApps={installedApps}
+            handelRemove={handelRemove}
             app={app}
           ></InstallList>
         ))}

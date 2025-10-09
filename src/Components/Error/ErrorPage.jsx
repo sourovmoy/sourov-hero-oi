@@ -3,7 +3,7 @@ import { useRouteError } from "react-router";
 
 const ErrorPage = () => {
   const error = useRouteError();
-  return <div>{error.massage}</div>;
+  return <div></div>;
 };
 
 export default ErrorPage;

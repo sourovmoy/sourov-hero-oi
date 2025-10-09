@@ -4,18 +4,15 @@ import useApps from "../../Functions/useApps";
 import Container from "../Container";
 import { Download, Star } from "lucide-react";
 import img from "../../images/icon-review.png";
-import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
 import { addApps } from "../../Functions/localStorage";
+import { toast } from "react-toastify";
+import Rechart from "./Rechart";
 
 const AppDetails = () => {
   const [state, setState] = useState(false);
 
-  const handelInstall = (statement, id) => {
-    if (state === true) {
-      alert("Already Installed");
-      return;
-    }
-    addApps(id);
+  const handelInstall = (statement, app) => {
+    addApps(app);
     setState(statement);
   };
 
@@ -23,6 +20,7 @@ const AppDetails = () => {
   const { apps, loading } = useApps();
   const selectedApp = apps.find((app) => String(app.id) == id);
   if (loading) return <p className="text-center">Loading...</p>;
+
   const {
     image,
     title,
@@ -84,19 +82,15 @@ const AppDetails = () => {
                   : "btn bg-gradient-to-l from-[#632ee3] to-[#9f62f2] hover:scale-105 text-white"
               }
             >
-              Install Now (<span>{size} MB</span>)
+              {state ? "Installed" : "Install Now"} (<span>{size} MB</span>)
             </button>
           </div>
         </div>
         <div>
           <h2 className="text-2xl font-semibold">Rating</h2>
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart width="150" height="40" data={ratings}>
-              <XAxis />
-              <YAxis dataKey="name" />
-              <Bar dataKey="count" />
-            </BarChart>
-          </ResponsiveContainer>
+          <div className=" ">
+            <Rechart ratings={ratings}></Rechart>
+          </div>
         </div>
 
         <div className="my-10 border-t-1 border-[#627382]">
