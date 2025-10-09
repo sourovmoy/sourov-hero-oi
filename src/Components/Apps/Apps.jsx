@@ -3,10 +3,11 @@ import Container from "../Container";
 import useApps from "../../Functions/useApps";
 import ShowApps from "./ShowApps";
 import Loader from "../Loader";
-
 const Apps = () => {
   const { apps, loading } = useApps();
   const [search, setSearch] = useState("");
+  const [searching, setSearching] = useState(false);
+
   const trim = search.trim().toLocaleLowerCase();
   const searchApps = trim
     ? apps.filter((app) => app.title.toLocaleLowerCase().includes(trim))
@@ -44,7 +45,13 @@ const Apps = () => {
             </svg>
             <input
               value={search}
-              onChange={(e) => setSearch(e.target.value)}
+              onChange={(e) => {
+                setSearching(true);
+                setSearch(e.target.value);
+                setTimeout(() => {
+                  setSearching(false);
+                }, 300);
+              }}
               type="search"
               required
               placeholder="Search Apps"
@@ -52,6 +59,7 @@ const Apps = () => {
           </label>
         </div>
       </div>
+      {searching ? <Loader></Loader> : ""}
       {loading ? (
         <Loader></Loader>
       ) : (

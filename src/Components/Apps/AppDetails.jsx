@@ -7,6 +7,7 @@ import img from "../../images/icon-review.png";
 import { addApps } from "../../Functions/localStorage";
 import { toast } from "react-toastify";
 import Rechart from "./Rechart";
+import Loader from "../Loader";
 
 const AppDetails = () => {
   const [state, setState] = useState(false);
@@ -14,13 +15,19 @@ const AppDetails = () => {
   const handelInstall = (statement, app) => {
     addApps(app);
     setState(statement);
+    if (state === false) {
+      return;
+    }
+    toast("Installing");
   };
 
-  const { id } = useParams();
+  let { id } = useParams();
   const { apps, loading } = useApps();
-  const selectedApp = apps.find((app) => String(app.id) == id);
-  if (loading) return <p className="text-center">Loading...</p>;
-
+  const selectedApp = apps.find((app) => String(app.id) == id) || {};
+  if (loading) return <Loader></Loader>;
+  if (Object.keys(selectedApp).length === 0) {
+    return <div>Nothing</div>;
+  }
   const {
     image,
     title,
@@ -45,7 +52,7 @@ const AppDetails = () => {
           <div className="flex-1">
             <h3 className="text-2xl font-bold mb-2">{title}</h3>
             <p className="border-b-1 pb-10 text-[#627382]">
-              Developed by{" "}
+              Developed by
               <span className="text-[#632ee3] font-semibold">
                 {companyName}
               </span>

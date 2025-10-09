@@ -2,8 +2,12 @@ import React, { useEffect, useState } from "react";
 import { getApps, removeApps } from "../../../Functions/localStorage";
 import Container from "../../Container";
 import InstallList from "./InstallList";
+import useApps from "../../../Functions/useApps";
+import Loader from "../../Loader";
+import { toast } from "react-toastify";
 
 const Installation = () => {
+  const { loading } = useApps();
   const [installedApps, setInstalledApps] = useState([]);
   const [sort, setSort] = useState();
 
@@ -25,6 +29,7 @@ const Installation = () => {
     const newApps = installedApps.filter((app) => app.id !== id);
     setInstalledApps(newApps);
     removeApps(id);
+    toast("UnInstalling");
   };
   return (
     <Container>
@@ -52,15 +57,19 @@ const Installation = () => {
           </select>
         </label>
       </div>
-      <div className="flex flex-col gap-5 rounded-lg my-10 h-[100vh]">
-        {sortedItem.map((app) => (
-          <InstallList
-            key={app.id}
-            handelRemove={handelRemove}
-            app={app}
-          ></InstallList>
-        ))}
-      </div>
+      {loading ? (
+        <Loader></Loader>
+      ) : (
+        <div className="flex flex-col gap-5 rounded-lg my-10 h-[100vh]">
+          {sortedItem.map((app) => (
+            <InstallList
+              key={app.id}
+              handelRemove={handelRemove}
+              app={app}
+            ></InstallList>
+          ))}
+        </div>
+      )}
     </Container>
   );
 };

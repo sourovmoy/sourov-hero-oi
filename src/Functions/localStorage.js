@@ -17,12 +17,14 @@ const setItemString = (apps) => {
 const addApps = (state) => {
   const getAllApps = getApps();
   const alreadyExists = getAllApps.some((item) => item.id === state.id);
+
   if (alreadyExists) {
     toast("Already Installed");
     return;
   } else {
     getAllApps.push(state);
     setItemString(getAllApps);
+    return;
   }
 };
 const removeApps = (id) => {
