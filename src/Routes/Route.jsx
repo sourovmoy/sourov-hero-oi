@@ -5,7 +5,6 @@ import Apps from "../Components/Apps/Apps";
 import ErrorPage from "../Components/Error/ErrorPage";
 import AppDetails from "../Components/Apps/AppDetails";
 import Installation from "../Components/Pages/Installation/Installation";
-import NoApp from "../Components/Apps/NoApp";
 import Loader from "../Components/Loader";
 import AppErrors from "../Components/Error/AppErrors";
 

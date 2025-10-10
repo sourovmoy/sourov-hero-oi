@@ -32,7 +32,7 @@ const RatingsChart = ({ ratings }) => {
             type="number"
             tickFormatter={(num) => (num / 10000).toFixed(0)}
           />
-          <YAxis dataKey="name" type="category" />
+          <YAxis reversed dataKey="name" type="category" />
           <Tooltip
             formatter={(value) =>
               new Intl.NumberFormat().format(value) + " ratings"
