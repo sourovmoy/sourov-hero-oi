@@ -18,7 +18,7 @@ const AppDetails = () => {
 
   useEffect(() => {
     const installedApps = getApps();
-    if (installedApps.some((app) => String(app.id === id))) {
+    if (installedApps.some((app) => String(app.id) === id)) {
       setState(true);
     }
   }, [id]);
