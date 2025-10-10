@@ -1,17 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router";
 import useApps from "../../Functions/useApps";
 import Container from "../Container";
 import { Download, Star } from "lucide-react";
 import img from "../../images/icon-review.png";
-import { addApps } from "../../Functions/localStorage";
+import { addApps, getApps } from "../../Functions/localStorage";
 import { toast } from "react-toastify";
 import Rechart from "./Rechart";
 import Loader from "../Loader";
 import AppErrors from "../Error/AppErrors";
 
 const AppDetails = () => {
+  let { id } = useParams();
+  const { apps, loading } = useApps();
+
   const [state, setState] = useState(false);
+
+  useEffect(() => {
+    const installedApps = getApps();
+    if (installedApps.some((app) => String(app.id === id))) {
+      setState(true);
+    }
+  }, [id]);
 
   const handelInstall = (statement, app) => {
     addApps(app);
@@ -23,13 +33,12 @@ const AppDetails = () => {
     }
   };
 
-  let { id } = useParams();
-  const { apps, loading } = useApps();
   const selectedApp = apps.find((app) => String(app.id) == id) || {};
   if (loading) return <Loader></Loader>;
   if (Object.keys(selectedApp).length === 0) {
     return <AppErrors></AppErrors>;
   }
+
   const {
     image,
     title,
