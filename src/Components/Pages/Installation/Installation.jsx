@@ -51,7 +51,7 @@ const Installation = () => {
             value={sort}
             onChange={(e) => setSort(e.target.value)}
           >
-            <option value="default">Sort by Size</option>
+            <option value="default">Sort by Install</option>
             <option value="low-to-high">Low to high</option>
             <option value="high-to-low">High to low</option>
           </select>
