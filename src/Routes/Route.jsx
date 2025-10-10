@@ -6,13 +6,12 @@ import ErrorPage from "../Components/Error/ErrorPage";
 import AppDetails from "../Components/Apps/AppDetails";
 import Installation from "../Components/Pages/Installation/Installation";
 import Loader from "../Components/Loader";
-import AppErrors from "../Components/Error/AppErrors";
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
-    // hydrateFallbackElement:<Loader></Loader>
+    hydrateFallbackElement: <Loader />,
     errorElement: <ErrorPage />,
     children: [
       {
