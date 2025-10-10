@@ -18,8 +18,9 @@ const AppDetails = () => {
     setState(statement);
     if (state) {
       return;
+    } else {
+      toast("Installing");
     }
-    toast("Installing");
   };
 
   let { id } = useParams();

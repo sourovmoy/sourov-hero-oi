@@ -60,7 +60,7 @@ const Installation = () => {
       {loading ? (
         <Loader></Loader>
       ) : (
-        <div className="flex flex-col gap-5 rounded-lg my-10 h-[100vh]">
+        <div className="flex flex-col gap-5 rounded-lg my-10">
           {sortedItem.map((app) => (
             <InstallList
               key={app.id}

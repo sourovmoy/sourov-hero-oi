@@ -1,11 +1,14 @@
 import React from "react";
 import { Link, useRouteError } from "react-router";
+import img from "../../images/error-404.png";
 
 const ErrorPage = () => {
   const error = useRouteError();
   return (
-    <div className="h-[80vh] mt-40">
-      <h1 className="text-center text-6xl font-bold">404</h1>
+    <div className="mt-20">
+      <div className="flex justify-center items-center">
+        <img src={img} alt="" />
+      </div>
       <h1 className="text-center text-4xl font-medium">
         OPPS!! {error.massage} Page NOT FOUND
       </h1>
