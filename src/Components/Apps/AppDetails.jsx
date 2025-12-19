@@ -41,7 +41,6 @@ const AppDetails = () => {
     }
   };
 
-  // const selectedApp = apps.find((app) => String(app.id) == id) || {};
   if (loading) return <Loader></Loader>;
   if (Object.keys(app).length === 0) {
     return <AppErrors></AppErrors>;
