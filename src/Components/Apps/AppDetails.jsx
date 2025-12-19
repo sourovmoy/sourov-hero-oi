@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router";
-import useApps from "../../Functions/useApps";
 import Container from "../Container";
 import { Download, Star } from "lucide-react";
 import img from "../../images/icon-review.png";
@@ -9,16 +8,25 @@ import { toast } from "react-toastify";
 import Rechart from "./Rechart";
 import Loader from "../Loader";
 import AppErrors from "../Error/AppErrors";
+import { useQuery } from "@tanstack/react-query";
+import useAxios from "../Hooks/useAxios";
 
 const AppDetails = () => {
-  let { id } = useParams();
-  const { apps, loading } = useApps();
+  const { id } = useParams();
+  const axios = useAxios();
+  const { data: app = {}, isLoading: loading } = useQuery({
+    queryKey: ["app", id],
+    queryFn: async () => {
+      const res = await axios.get(`/app/${id}`);
+      return res.data.results;
+    },
+  });
 
   const [state, setState] = useState(false);
 
   useEffect(() => {
     const installedApps = getApps();
-    if (installedApps.some((app) => String(app.id) === id)) {
+    if (installedApps.some((app) => String(app._id) === id)) {
       setState(true);
     }
   }, [id]);
@@ -33,9 +41,9 @@ const AppDetails = () => {
     }
   };
 
-  const selectedApp = apps.find((app) => String(app.id) == id) || {};
+  // const selectedApp = apps.find((app) => String(app.id) == id) || {};
   if (loading) return <Loader></Loader>;
-  if (Object.keys(selectedApp).length === 0) {
+  if (Object.keys(app).length === 0) {
     return <AppErrors></AppErrors>;
   }
 
@@ -49,7 +57,7 @@ const AppDetails = () => {
     ratings,
     size,
     reviews,
-  } = selectedApp;
+  } = app;
 
   const review = reviews / 1000000;
 
@@ -93,7 +101,7 @@ const AppDetails = () => {
             </div>
             <button
               disabled={state}
-              onClick={() => handelInstall(true, selectedApp)}
+              onClick={() => handelInstall(true, app)}
               className={
                 state
                   ? "btn bg-gradient-to-l from-[#632ee3] to-[#9f62f2] hover:scale-105 text-white opacity-40"

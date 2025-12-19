@@ -9,9 +9,10 @@ const Apps = () => {
   const axios = useAxios();
   const [page, setPage] = useState(0);
   const [search, setSearch] = useState({ search: "" });
+  const [sort, setSort] = useState({ sort: "" });
   const limit = 12;
   const { data: apps = [], isLoading: loading } = useQuery({
-    queryKey: ["apps", search, page],
+    queryKey: ["apps", search, page, sort],
     queryFn: async () => {
       const skip = page * limit;
       const res = await axios.get("/apps", {
@@ -19,6 +20,7 @@ const Apps = () => {
           limit,
           skip,
           search,
+          sort,
         },
       });
 
@@ -33,7 +35,7 @@ const Apps = () => {
     e.preventDefault();
     const search = e.target.search.value;
     setSearch(search);
-    setPage(1);
+    setPage(0);
     e.target.reset();
   };
 
@@ -80,6 +82,21 @@ const Apps = () => {
               </button>
             </label>
           </form>
+          <div>
+            <select
+              className="select select-bordered"
+              onChange={(e) => {
+                setSort(e.target.value);
+                setPage(1);
+              }}
+            >
+              <option value="">Sort</option>
+              <option value="rating-desc">Ratings : High to Low</option>
+              <option value="rating-asc">Ratings : Low to High</option>
+              <option value="download-asc">DownLoads : High to Low</option>
+              <option value="download-desc">DownLoads : Low to High</option>
+            </select>
+          </div>
         </div>
       </div>
       {loading ? (
@@ -110,7 +127,7 @@ const Apps = () => {
               }`}
               key={i}
             >
-              {i}
+              {i + 1}
             </button>
           ))}
           <button

@@ -3,15 +3,22 @@ import Container from "../../Container";
 import img1 from "../../../images/Group (3).png";
 import img2 from "../../../images/Group (4).png";
 import img3 from "../../../images/hero.png";
-import useApps from "../../../Functions/useApps";
-import TrendingApps from "./TrendingApps";
 import { Link } from "react-router";
 import { ArrowRight } from "lucide-react";
 import Loader from "../../Loader";
+import useAxios from "../../Hooks/useAxios";
+import { useQuery } from "@tanstack/react-query";
+import ShowApps from "../../Apps/ShowApps";
 
 const Home = () => {
-  const { apps, loading } = useApps();
-  const trendingApps = apps.slice(0, 8);
+  const axios = useAxios();
+  const { data: trendingApps = [], isLoading: loading } = useQuery({
+    queryKey: ["trending-apps"],
+    queryFn: async () => {
+      const res = await axios.get("/trending-apps");
+      return res.data.results;
+    },
+  });
 
   return (
     <div className="my-20">
@@ -76,7 +83,7 @@ const Home = () => {
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 pt-20">
             {trendingApps.map((app) => (
-              <TrendingApps key={app.id} app={app}></TrendingApps>
+              <ShowApps key={app.id} app={app}></ShowApps>
             ))}
           </div>
         )}
