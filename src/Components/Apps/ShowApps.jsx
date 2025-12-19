@@ -3,8 +3,6 @@ import React from "react";
 import { Link } from "react-router";
 
 const ShowApps = ({ app }) => {
-  console.log(app);
-
   const downloads = (app.downloads / 100000).toFixed(2);
 
   return (
