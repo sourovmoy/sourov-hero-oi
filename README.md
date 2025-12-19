@@ -1,7 +1,7 @@
 # Website Screenshot
 
 <p align="center">
-  <img src="./localhost_5173_.png" width="800" alt="Homepage Screenshot" />
+  <img src="./src/images/localhost_5173_.png" width="800" alt="Homepage Screenshot" />
 </p>
 # Productivity Apps Showcase Platform
 
