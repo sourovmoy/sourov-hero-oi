@@ -90,3 +90,60 @@ This project is open-source and available for learning, customization, and portf
 ## 👨‍💻 Author
 
 Developed as a full-stack project demonstrating modern web technologies and best practices.
+
+---
+
+## 🚀 Deployment
+
+### Deploy to Vercel
+
+This project is configured for easy deployment on Vercel:
+
+1. **Push to GitHub** (if not already done):
+   ```bash
+   git add .
+   git commit -m "Ready for Vercel deployment"
+   git push origin main
+   ```
+
+2. **Deploy via Vercel Dashboard**:
+   - Go to [vercel.com](https://vercel.com)
+   - Click "New Project"
+   - Import your GitHub repository
+   - Vercel will automatically detect the Vite framework
+   - Click "Deploy"
+
+3. **Deploy via Vercel CLI**:
+   ```bash
+   npm i -g vercel
+   vercel
+   ```
+
+4. **Environment Variables**:
+   - Add `VITE_SERVER_LINK` in your Vercel project settings
+   - Current value: `https://sourov-hero-server.vercel.app`
+
+### Build Configuration
+
+The project includes optimized build settings:
+- Output directory: `dist`
+- Build command: `npm run build`
+- SPA routing configured with rewrites
+- Code splitting for better performance
+- Optimized chunk sizes for faster loading
+
+### Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
